@@ -1,0 +1,13 @@
+{
+  "app_category": "制作区",
+  "app_display_name": "TDBoost_Test",
+  "app_icon": "IQIYI.png",
+  "app_tooltip": "Windows工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\test2\\TDBoost.bat"],
+      "pause": false
+    }
+  }
+}

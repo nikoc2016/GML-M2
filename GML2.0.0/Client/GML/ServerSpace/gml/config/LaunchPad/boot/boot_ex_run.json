@@ -1,0 +1,22 @@
+{
+  "app_category": "Demo",
+  "app_display_name": "BOOT_RUN",
+  "app_icon": "demo.png",
+  "app_tooltip": "This is an example for method run",
+  "app_run": {
+    "method": "run",
+    "params": {
+      "command": [
+        "cmd.exe",
+        "/k",
+        "@echo off && echo %env_1% %env_2%"
+      ],
+      "custom_env": {
+        "env_1": "hello",
+        "env_2": "world"
+      },
+      "cwd": null,
+      "display_mode": "SW_SHOWNORMAL"
+    }
+  }
+}

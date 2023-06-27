@@ -1,0 +1,17 @@
+{
+  "app_category": "Demo",
+  "app_display_name": "BOOT_RUN_SYSTEM",
+  "app_icon": "demo.png",
+  "app_tooltip": "This is an example for method run_system",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": [
+        "cmd.exe",
+        "/k",
+        "echo hello world"
+      ],
+      "pause": false
+    }
+  }
+}

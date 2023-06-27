@@ -1,0 +1,13 @@
+{
+  "app_category": "制作区",
+  "app_display_name": "工具文档",
+  "app_icon": "td_wiki.png",
+  "app_tooltip": "先看文档再问！",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\LEM\\td_wiki.bat"],
+      "pause": false
+    }
+  }
+}

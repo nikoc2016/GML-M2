@@ -1,0 +1,12 @@
+{
+  "app_category": "通用工具",
+  "app_display_name": "提交IT工单",
+  "app_icon": "demo.png",
+  "app_tooltip": "使用此工具提交IT工单",
+  "app_run": {
+    "method": "gml_cmd",
+    "params": {
+      "command": "ticket"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "app_category": "制作区",
+  "app_display_name": "计算器",
+  "app_icon": "calc.png",
+  "app_tooltip": "Windows工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["\\\\10.10.20.10\\software\\GML_Apps\\Calc\\calc1.exe"],
+      "pause": false
+    }
+  }
+}

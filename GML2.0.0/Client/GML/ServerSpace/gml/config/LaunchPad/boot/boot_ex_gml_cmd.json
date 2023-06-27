@@ -1,0 +1,12 @@
+{
+  "app_category": "Demo",
+  "app_display_name": "BOOT_GML_CMD",
+  "app_icon": "demo.png",
+  "app_tooltip": "This is an example for method gml_cmd",
+  "app_run": {
+    "method": "gml_cmd",
+    "params": {
+      "command": "awake LaunchPad"
+    }
+  }
+}

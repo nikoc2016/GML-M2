@@ -1,0 +1,13 @@
+{
+  "app_category": "制作区",
+  "app_display_name": "IQIYI 2020",
+  "app_icon": "IQIYI.png",
+  "app_tooltip": "网络视频播放平台",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\FinlessPorpoise\\M20_launch.bat"],
+      "pause": false
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "Cyberpunk批渲染",
+  "app_icon": "",
+  "app_tooltip": "TD工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\LEM\\batch_n_render_tool.bat"],
+      "pause": false
+    }
+  }
+}

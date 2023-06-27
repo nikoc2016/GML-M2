@@ -1,0 +1,24 @@
+{
+  "app_category": "Demo",
+  "app_display_name": "BOOT_RUN_SYSTEM_SEQUENTIAL",
+  "app_icon": "demo.png",
+  "app_tooltip": "This is an example for method run_system_sequential",
+  "app_run": {
+    "method": "run_system_sequential",
+    "params": {
+      "command": [
+        [
+          "ping",
+          "-n",
+          "3",
+          "127.0.0.1"
+        ],
+        [
+          "start",
+          "calc.exe"
+        ]
+      ],
+      "pause": true
+    }
+  }
+}

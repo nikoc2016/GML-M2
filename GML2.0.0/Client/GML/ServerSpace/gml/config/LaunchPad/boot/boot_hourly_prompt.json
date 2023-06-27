@@ -1,0 +1,13 @@
+{
+  "app_category": "制作区",
+  "app_display_name": "正点报时",
+  "app_icon": "hourly_clock.png",
+  "app_tooltip": "金川特色工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["\\\\10.10.20.10\\software\\GML_Apps\\HourlyClock\\hourly_clock_v2.exe"],
+      "pause": false
+    }
+  }
+}

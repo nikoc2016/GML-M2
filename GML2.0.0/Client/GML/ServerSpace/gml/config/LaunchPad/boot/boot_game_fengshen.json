@@ -1,0 +1,13 @@
+{
+  "app_category": "玩乐天地",
+  "app_display_name": "封神不是敦煌",
+  "app_icon": "HGNDZLXLT.png",
+  "app_tooltip": "金川游戏",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": "",
+      "pause": false
+    }
+  }
+}

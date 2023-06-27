@@ -1,0 +1,13 @@
+{
+  "app_category": "云计算",
+  "app_display_name": "FTP资产上传",
+  "app_icon": "FTPAssetSync.png",
+  "app_tooltip": "FTP Asset Sync Tool",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GExecutable\\FTPAssetSync\\1.0.0\\run.bat"],
+      "pause": false
+    }
+  }
+}

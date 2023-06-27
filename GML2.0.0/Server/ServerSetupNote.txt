@@ -1,0 +1,111 @@
+4SerNote
+
+===== Init:
+systemctl disable --now firewalld NetworkManager
+setenforce 0
+sed -ri '/^[^#]*SELINUX=/s#=.+$#=disabled#' /etc/selinux/config
+yum install -y wget net-tools git psmisc epel-release vim
+yum install -y jq bash-completion
+yum update -y
+reboot
+
+===== Optimize docker:
+# Install docker
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+
+===== Docker Private Accelerate
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://e1jd1kdf.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+sudo systemctl enable docker.service
+
+===== DNS:
+vim /etc/NetworkManager/NetworkManager.conf
+"""
+[main]
+dns=no
+"""
+vim /etc/resolv.conf
+"""
+nameserver 10.10.20.10
+nameserver 119.29.29.29
+"""
+
+===== Docker Network
+docker network create gmlnet
+
+===== MySQL
+docker pull mysql:5.7.22
+docker run \
+       --network gmlnet\
+       --network-alias mysql\
+       -p 3306:3306 \
+       --name mysql_5.7.22-GML \
+       -v /home/data/mysql-5-7-22/conf:/etc/mysql/conf.d \
+       -v /home/data/mysql-5-7-22/logs:/logs \
+       -v /home/data/mysql-5-7-22/data:/var/lib/mysql \
+       -m 2048m \
+       -e MYSQL_ROOT_PASSWORD=jc.db0601 \
+        --restart always \
+       -d mysql:5.7.22
+
+===== Samba
+docker pull dperson/samba:latest
+docker run \
+       -it \
+       --network gmlnet\
+       --network-alias samba\
+       --name samba \
+       -v /home/data/smb:/mount/smb \
+       -m 512m \
+       -e TZ=CST-8 \
+       -p 139:139 \
+       -p 445:445 \
+       --restart always \
+       -d dperson/samba \
+       -u "super;super" \
+       -s "gml;/mount/smb/gml;yes;yes;yes;all;super;super;none" \
+       -s "logs;/mount/smb/logs;yes;no;yes;all;super;all;none" \
+       -r \
+       -p
+
+# -s "<name;/path>[;browse;readonly;guest;users;admins;writelist;comment]"
+# net use \\10.10.20.4 /del
+# net use \\10.10.20.4 /user:guest
+# net use \\10.10.20.4 /user:super super
+
+===== Redis
+docker pull redis:7.0.2
+docker run \
+       --network gmlnet\
+       --network-alias redis\
+       --name Redis_7.0.2 \
+       -p 6379:6379 \
+       -m 4096m \
+       -v /home/data/redis-7-0-2/redis-etc/:/etc/redis \
+       -v /home/data/redis-7-0-2/redis-data/:/data \
+       --restart always \
+       -d redis:7.0.2 \
+       --save 60 1 \
+       --loglevel warning \
+       --appendonly yes \
+       --requirepass jc.db0601
+       
+
+===== Start-Up Script
+rm -f /etc/rc.d/rc.local
+sudo tee /etc/rc.d/rc.local <<-'EOF'
+#!/bin/bash
+touch /var/lock/subsys/local
+/home/code/startup.sh
+EOF
+chmod +x /etc/rc.d/rc.local
+sudo tee /home/code/startup.sh <<-'EOF'
+#!/bin/bash
+systemctl start docker
+EOF

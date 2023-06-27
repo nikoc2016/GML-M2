@@ -1,0 +1,13 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "GKpi绩效考核",
+  "app_icon": "GKpi_Logo_Big.png",
+  "app_tooltip": "显示工作绩效",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GExecutable\\GKpi\\GKpi.lnk"],
+      "pause": false
+    }
+  }
+}

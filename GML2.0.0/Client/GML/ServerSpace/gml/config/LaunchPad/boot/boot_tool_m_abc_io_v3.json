@@ -1,0 +1,9 @@
+{
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\LEM\\ABC_Tool_v3.bat"],
+      "pause": false
+    }
+  }
+}

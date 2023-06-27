@@ -1,0 +1,13 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "动画层级映射工具",
+  "app_icon": "",
+  "app_tooltip": "TD工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\BXS\\shot_remapper.bat"],
+      "pause": false
+    }
+  }
+}

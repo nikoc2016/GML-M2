@@ -1,0 +1,12 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "WorkforceMonitor",
+  "app_icon": "",
+  "app_tooltip": "TD工具",
+  "app_run": {
+    "method": "gml_cmd",
+    "params": {
+      "command": "awake WorkforceMonitor"
+    }
+  }
+}

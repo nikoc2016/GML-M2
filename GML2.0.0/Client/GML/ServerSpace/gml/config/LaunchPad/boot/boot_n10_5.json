@@ -1,0 +1,13 @@
+{
+  "app_category": "制作区",
+  "app_display_name": "Cyberpunk 10.5",
+  "app_icon": "nuke.png",
+  "app_tooltip": "你好呀夜之城",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["D:\\Program Files\\Nuke 10.5v1\\Nuke10.5.exe"],
+      "pause": false
+    }
+  }
+}

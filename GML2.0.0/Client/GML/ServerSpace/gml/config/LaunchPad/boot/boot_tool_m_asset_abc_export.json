@@ -1,0 +1,13 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "资产ABC导出工具",
+  "app_icon": "",
+  "app_tooltip": "TD工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\gvfpipe\\utils\\AssetsAlembicExporter\\exporter_win.exe"],
+      "pause": false
+    }
+  }
+}

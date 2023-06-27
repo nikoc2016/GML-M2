@@ -1,0 +1,13 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "解算导出-发布工具",
+  "app_icon": "",
+  "app_tooltip": "TD工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\common\\CFX_batch_export_abc_tool.bat"],
+      "pause": false
+    }
+  }
+}

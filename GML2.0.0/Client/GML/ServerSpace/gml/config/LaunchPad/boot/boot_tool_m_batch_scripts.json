@@ -1,0 +1,13 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "Maya批处理工具",
+  "app_icon": "",
+  "app_tooltip": "TD工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\GML-1M\\apps_for_all_project\\BatchScript\\BatchScripts.bat"],
+      "pause": false
+    }
+  }
+}

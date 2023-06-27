@@ -1,0 +1,10 @@
+{
+  "app_category": "Standard",
+  "app_display_name": "GML Application",
+  "app_icon": "demo.png",
+  "app_tooltip": "An GML Application",
+  "app_run": {
+    "method": null,
+    "params": null
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "app_display_name": "IQIYI 2018 RS",
+  "app_icon": "IQIYI_RS.png",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\LEM\\M18_FS_V1.4_RedShift.bat"],
+      "pause": false
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "app_category": "离线工具",
+  "app_display_name": "灯光批量集合工具",
+  "app_icon": "",
+  "app_tooltip": "TD工具",
+  "app_run": {
+    "method": "run_system",
+    "params": {
+      "command": ["V:\\TD\\GMainLauncher\\Config\\LEM\\LGT_Tool.bat"],
+      "pause": false
+    }
+  }
+}
